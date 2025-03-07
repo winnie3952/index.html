@@ -1,5 +1,47 @@
-<!doctype html>
-<html>
-  <head>><title>Winnie's webside</title></head>
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的部落格</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>歡迎來到我的部落格</h1>
+  </header>
 
+  <main>
+    <section id="post-list">
+      <h2>最新文章</h2>
+      <div class="post" id="post-1">
+        <h3>文章標題 1</h3>
+        <p>這是文章 1 的簡短介紹...</p>
+        <a href="#" class="read-more" onclick="viewPost(1)">閱讀更多</a>
+      </div>
+      <div class="post" id="post-2">
+        <h3>文章標題 2</h3>
+        <p>這是文章 2 的簡短介紹...</p>
+        <a href="#" class="read-more" onclick="viewPost(2)">閱讀更多</a>
+      </div>
+      <div class="post" id="post-3">
+        <h3>文章標題 3</h3>
+        <p>這是文章 3 的簡短介紹...</p>
+        <a href="#" class="read-more" onclick="viewPost(3)">閱讀更多</a>
+      </div>
+    </section>
+
+    <section id="post-content" style="display: none;">
+      <h2 id="post-title"></h2>
+      <p id="post-body"></p>
+      <button onclick="goBack()">返回</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 我的部落格</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
 </html>
