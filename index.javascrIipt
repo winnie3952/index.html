@@ -1,0 +1,35 @@
+// 模擬文章內容
+const posts = {
+  1: {
+    title: "文章標題 1",
+    body: "這是文章 1 的完整內容，這裡可以放置更長的文字，描述更多的細節..."
+  },
+  2: {
+    title: "文章標題 2",
+    body: "這是文章 2 的完整內容，這裡可以放置更長的文字，描述更多的細節..."
+  },
+  3: {
+    title: "文章標題 3",
+    body: "這是文章 3 的完整內容，這裡可以放置更長的文字，描述更多的細節..."
+  }
+};
+
+// 顯示文章詳細內容
+function viewPost(postId) {
+  const post = posts[postId];
+  
+  // 顯示文章內容
+  document.getElementById('post-title').innerText = post.title;
+  document.getElementById('post-body').innerText = post.body;
+  
+  // 隱藏文章列表，顯示文章內容
+  document.getElementById('post-list').style.display = 'none';
+  document.getElementById('post-content').style.display = 'block';
+}
+
+// 返回文章列表
+function goBack() {
+  // 顯示文章列表，隱藏文章內容
+  document.getElementById('post-list').style.display = 'block';
+  document.getElementById('post-content').style.display = 'none';
+}
